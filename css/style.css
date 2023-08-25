@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500&display=swap');
+
+:root
+{
+    --roseColor : #e65f78;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body
+{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+section
+{
+    padding: 80px 0px;
+}
+
+.roseColor
+{
+    color: var(--roseColor);
+}
+
+
+/* --------------------------------- NavBar------------------------ */
+.navbar-nav .nav-link
+{
+    transition: color 0.5s;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover
+{
+    color: var(--roseColor, red);
+    font-weight: 900;
+
+}
+
+
+/* ------------------------------ Icons----------------------------- */
+.setting
+{
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 99;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0px;
+}
+
+.up
+
+{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    background-color: var(--roseColor);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* --------------------------------Home-------------------------- */
+#home .layer
+{
+    min-height: 100vh;
+}
+
+#home
+{
+    background: url(../images/header-bg.jpg) center fixed no-repeat;
+    background-size: cover;
+}
+
+
+.down
+{
+    width: 30px;
+    height: 50px;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    animation: bounce 1s linear infinite  ;
+}
+
+.down::after
+{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 10px;
+    background-color: #fff;
+}
+
+@keyframes bounce {
+    0%{
+
+        bottom: 30px;
+    }
+    10%{
+        bottom: 60px;
+    }
+    100%{
+        bottom: 30px;
+    }
+}
+
+
+/* ------------------About---------------------- */
+.social li
+{
+    width: 35px;
+    height: 35px;
+    border: 2px solid #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50% ;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.social li:hover
+{
+    color: var(--roseColor);
+    border-color: var(--roseColor);
+}
+
+
+/* ----------------------------Services--------------------------- */
+#services .services-area h3
+{
+    position: relative;
+}
+
+#services .services-area h3::after
+{
+    content: "";
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: var(--roseColor);
+    transition: width 0.5s;
+}
+
+#services .services-area .card:hover h3::after
+{
+    width: 100px;
+}
+
+/* ----------------------------Hire Me--------------------------------- */
+.hire-me .hire-btn
+{
+    all: unset;
+    cursor: pointer;
+    background-color: var(--roseColor);
+    color: #fff;
+    padding: 10px 25px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* ---------------------------Client------------------------ */
+#client .carousel-indicators [data-bs-target]
+{
+    all: unset;
+    width: 15px;
+    height: 5px;
+    background-color: var(--roseColor);
+    margin-inline: 3px;
+    opacity: 0.7;
+    border-radius:50px ;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#client .carousel-indicators .active 
+{
+    width: 30px;
+    opacity: 1;
+}
+
+#client .carousel-item span,
+#client .carousel-item img,
+#client .carousel-item blockquote,
+#client .carousel-item  p
+{
+    display: block;
+    transform: scale(0);
+    transition: all 1s;
+}
+
+#client .carousel-item.active span,
+#client .carousel-item.active img,
+#client .carousel-item.active blockquote,
+#client .carousel-item.active  p
+{
+    transform: scale(1);
+}
+
+
+/* ---------------------------------Portfolio---------------------------- */
+#portfolio .nav-pills .nav-link.active, #portfolio .nav-pills .nav-link:hover
+{
+    background-color: var(--roseColor);
+    color: #fff;
+}
+
+#portfolio .nav-pills .nav-link
+{
+    color: #000;
+    padding: 2px 15px;
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+#portfolio .image .text
+{
+
+    top: 150%;
+}
+
+#portfolio .image img
+{
+    transition: all 0.5s;
+}
+
+#portfolio .image:hover img
+{
+    transform: scale(1.2);
+}
+
+
+#portfolio .image .text
+{
+    transition: top 0.5s 0.2s;
+}
+
+#portfolio .image:hover .text
+{
+    top: 50%;
+}
+
+#portfolio .image .layer
+{
+    transition: opacity 0.5s 0.3s;
+}
+#portfolio .image:hover .layer
+{
+    opacity: 1 !important;
+}
